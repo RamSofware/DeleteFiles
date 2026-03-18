@@ -30,13 +30,18 @@ namespace DeleteFiles
                 Console.WriteLine("Please specify the directory, example:[-d \"c:\tmp\files\"]");
                 return;
             }
-            
-            if (CommandLine["a"] == null)
-            {
-                //Console.WriteLine("-a =" + CommandLine["a"]);
-                Console.WriteLine("Please specify the agged files in days, example:[-a 30]");
-                return;
-            }
+            int aggedDays = 0;
+            Int32.TryParse(args[0], out aggedDays);
+            string dirName = args[1].ToString();
+            //string[] files = Directory.GetFiles();
+            Console.WriteLine("Working directory = " + dirName);
+            Console.WriteLine("agged days = " + args[0]);
+            Console.ReadKey();
+            /*
+            this is a test on March 18 2026
+            */
+            /*
+            string[] files = Directory.GetFiles(dirName);
 
             string[] files = Directory.GetFiles(CommandLine["d"]);
             int agged = Convert.ToInt32(CommandLine["a"]);
