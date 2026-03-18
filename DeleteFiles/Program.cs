@@ -17,7 +17,9 @@ namespace DeleteFiles
             Console.WriteLine("Working directory = " + dirName);
             Console.WriteLine("agged days = " + args[0]);
             Console.ReadKey();
-            
+            /*
+            this is a test on March 18 2026
+            */
             /*
             string[] files = Directory.GetFiles(dirName);
 
